@@ -131,27 +131,42 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p></p>
                 
-                <h2 class="page-header">Text Diary&nbsp;&nbsp;&nbsp;
-                    <a data-no-instant id="to_photo" class="tab" href="new_entry_photo.html"><font color=#A0A0A0>Photo Diary</font></a>
+                <h2 class="page-header">
+                    <a data-no-instant id="to_text" class="tab" href="new_entry.html"><font color=#A0A0A0>Text Diary</font></a>
+                    &nbsp;&nbsp;&nbsp;Photo Diary
                 </h2>
                
                 <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                 <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-
-                <form name="sentMessage" id="contactForm" novalidate>                        
+                    <img id="profile" style="width:40%; margin-top:10px;" class="img-rounded" class="pull-left"/>
+                    <br>
+                    <input type="file" id="myProfile" accept="image/*" class="form-control" onchange="showMyImage(this)" />
+                    <button type="submit" class="btn btn-default btn-sm" onclick="document.getElementById('myProfile').click()">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        Picture
+                    </button>
+                    <br>
+                    <br>
+                <form  method="get" action="home.html">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Title</label>
+                            <input type="text" class="form-control" placeholder="Title">
+                            <!--
                             <input type="text" class="form-control" placeholder="Title" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block text-danger"></p>
+                            
+                            <p class="help-block text-danger"></p> -->
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>New Entry</label>
+                            <label>What is in your mind?</label>
+                            <textarea rows="10" class="form-control" placeholder="What are you thinking?" required data-validation-required-message="Please write your thoughts."></textarea>
+                            <!--
                             <textarea rows="10" class="form-control" placeholder="New Entry" id="message" required data-validation-required-message="Please write your thoughts."></textarea>
                             <p class="help-block text-danger"></p>
+                            -->
                         </div>
                     </div>
                     <br>
@@ -163,9 +178,13 @@
                               <option>Cook book</option>
                             </select>
                             <br>
-                            <button type="submit" class="btn btn-default btn-sm">Submit</button>
+                           
                         </div>
                     </div>
+                   <!-- <button onclick="location.href = 'home.html';" type="submit" class="btn btn-default btn-sm">Submit</button> -->
+                   <!--<button type="reset" class="btn btn-default btn-sm">Reset</button> -->
+                     <button type="submit" class="btn btn-default btn-sm">Submit</button>
+
                 </form>
             </div>
         </div>
@@ -228,6 +247,27 @@
 
 
     </script>
+    <script>
+        function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0; i < files.length; i++) {           
+            var file = files[i];
+            var imageType = /image.*/;     
+            if (!file.type.match(imageType)) {
+                continue;
+            }           
+            var img=document.getElementById("profile");            
+            img.file = file;    
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { 
+                return function(e) { 
+                    aImg.src = e.target.result; 
+                }; 
+            })(img);
+            reader.readAsDataURL(file);
+            }    
+        }
+</script>
 </body>
 
 </html>
