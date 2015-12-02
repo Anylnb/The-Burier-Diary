@@ -83,6 +83,7 @@
                                 </ul>
                   
                     </li>
+
                     <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="glyphicon glyphicon-user"></i>
@@ -96,6 +97,7 @@
                                     <li><a href="index.html">Log out</a></li>
                                 </ul>
                     </li>
+                  
                     <li> <a href="new_entry.html"><i class="glyphicon glyphicon-cog"></i></a></li>
                     <li><a href="index.html"><i class="glyphicon glyphicon-off"></i></a></li>
                 </ul>
@@ -109,6 +111,7 @@
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
         <div class="container">
+            <!---
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
@@ -118,6 +121,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </header>
 
@@ -130,6 +134,11 @@
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                 <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
                 <form name="sentMessage" id="contactForm" novalidate>
+                       
+                            <button type="submit" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-plus"></i>Picture</button>
+                        
+                        
+
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Title</label>
@@ -140,7 +149,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>New Entry</label>
-                            <textarea rows="5" class="form-control" placeholder="New Entry" id="message" required data-validation-required-message="Please write your thoughts."></textarea>
+                            <textarea rows="10" class="form-control" placeholder="New Entry" id="message" required data-validation-required-message="Please write your thoughts."></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -148,13 +157,12 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <select class="form-control">
+                        <select class="form-control">
                               <option>Select Your Target Diary Book</option>
                               <option>Cook book</option>
                             </select>
                             <br>
-                            <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i>Picture</button>
-                            <button type="submit" class="btn btn-default">Submit</button>
+                            <button type="submit" class="btn btn-default btn-sm">Submit</button>
                         </div>
                     </div>
                 </form>

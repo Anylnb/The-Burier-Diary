@@ -1,9 +1,31 @@
 .form-group select
 {
 	width: 250px;
+	height: 20px;
 }
 
 .form-group p
 {
 	font-size: 16px;
+}
+.intro-header
+{
+	height: 60px;
+}
+.dropdown li
+{
+	color: #fff;
+}
+.navbar-custom .nav .dropdown li a
+{
+	color:#000;
+}
+.navbar-custom .nav .dropdown li a:hover,
+  .navbar-custom .nav .dropdown li a:focus {
+    color: #0085a1;
+  }
+
+.btn
+{
+	padding: 7px 12px;
 }
