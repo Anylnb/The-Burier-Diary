@@ -33,3 +33,9 @@
 #myProfile {
     display:none;
 }
+
+a:hover,
+ a:focus
+{
+	color: #0085a1;
+}
