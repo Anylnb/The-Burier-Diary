@@ -85,7 +85,7 @@
                     <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="glyphicon glyphicon-user"></i>
-                                     Username
+                                    <label id="user"></label>
                                     <i class="glyphicon glyphicon-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -126,6 +126,9 @@
 
     <!-- Main Content -->
     <div class="container">
+    <FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns">
+</FORM>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <p>What are people writing today...</p>
@@ -233,9 +236,16 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    document.getElementById("user").innerHTML = localStorage.getItem("username");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+
 
 </body>
 

@@ -123,6 +123,8 @@ Author     : Maddie
                                 <br>
                                 <br>
                                 <button type="submit" id="like" class="btn btn-danger btn-sm" onclick="changeLikes()"><i class="glyphicon glyphicon-ok"></i>Likes (48)</button>
+                                <p><button onclick="clickCounter()" id="result" type="button">Click me!</button></p>
+                            
                                 <button type="submit" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus"></i>Friends</button>
 
 
@@ -333,12 +335,21 @@ function showMyImage(fileInput) {
     }    
 }
 </script>
+
 <script>
 function changeLikes(fileInput) {
-    document.getElementById("like").innerHTML = "<i class='glyphicon glyphicon-ok'></i>Likes (49)";
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.likecount) {
+            localStorage.likecount = Number(localStorage.likecount)+1;
+        } else {
+            localStorage.likecount = 49;
+        }
+        document.getElementById("like").innerHTML = "<i class='glyphicon glyphicon-ok'></i>Likes (" + localStorage.likecount + ")"
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
 }
 </script>
-
 </body>
 
 </html>

@@ -91,8 +91,8 @@
                 <div class="wrap">
                     <p class="form-title">
                         Sign In</p>
-                    <form class="login">
-                    <input type="text" placeholder="Username" />
+                    <form method="get" action="home.html" class="login">
+                    <input type="text" placeholder="Username" name="name"/>
                     <input type="password" placeholder="Password" />
                     <input type="submit" value="LogIn" class="btn btn-default" />
                     <div class="remember-forgot">
@@ -172,9 +172,18 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    //var x = document.getElementsByName("name");
+    localStorage.setItem("username", "Maddie");
+    localStorage.setItem("password", "123456");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
 
 </body>
 
