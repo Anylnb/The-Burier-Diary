@@ -132,7 +132,19 @@
                                     <hr>
                                     <div class="post-preview">
                                         <a href="post.html">
-                                            <div class="entry_title">Today's life</div>
+                                            <div class="entry_title">Despicable me</div>
+                                            <img src="img/minion.png" id="profile" style="width:30%; margin-top:10px;" class="img-rounded" class="pull-left"/>
+                                            <h3 class="post-subtitle">
+                                                Banana!
+                                            </h3>
+                                        </a>
+                                        <p class="post-meta">Posted by <a href="account_info.html">Minion</a> on Dec 11, 2015, 3:17 pm</p>
+                                    </div>
+                                    <hr>
+                                    <hr>
+                                    <div class="post-preview">
+                                        <a href="post.html">
+                                            <div class="entry_title">Life</div>
                                             <h3 class="post-subtitle">
                                                 Now is no time to think of what you do not have. Think of what you can do with what there is    ...
                                             </h3>
@@ -144,7 +156,7 @@
                                     <hr>
                                     <div class="post-preview">
                                         <a href="post.html">
-                                            <div class="entry_title">Today's life</div>
+                                            <div class="entry_title">Spring</div>
                                             <h3 class="post-subtitle">
                                                 Today is so nice. The thanksgiving break is coming up. I just finished all my dues and meetings! yeah    ...
                                             </h3>
@@ -156,7 +168,7 @@
                                     <hr>
                                     <div class="post-preview">
                                         <a href="post.html">
-                                            <div class="entry_title">Today's life</div>
+                                            <div class="entry_title">Graduation</div>
                                             <h3 class="post-subtitle">
                                                 I love U of I so much! I love Whiskey!
                                             </h3>
@@ -168,7 +180,7 @@
                                     <hr>
                                     <div class="post-preview">
                                         <a href="post.html">
-                                            <div class="entry_title">Today's life</div>
+                                            <div class="entry_title">Holidays</div>
                                             <h3 class="post-subtitle">
                                                 I am going to Cuba this winter. Hope I can know more about the world. Anyone wants to join me?
                                             </h3>
@@ -250,7 +262,7 @@
             <script>
 // Check browser support
 if (typeof(Storage) !== "undefined") {
-    document.getElementById("user").innerHTML = localStorage.getItem("username");
+    document.getElementById("user").innerHTML = sessionStorage.getItem("username");
 } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }

@@ -177,8 +177,8 @@
 if (typeof(Storage) !== "undefined") {
     // Store
     //var x = document.getElementsByName("name");
-    localStorage.setItem("username", "Maddie");
-    localStorage.setItem("password", "123456");
+    sessionStorage.setItem("username", "Maddie");
+    sessionStorage.setItem("password", "123456");
 } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }

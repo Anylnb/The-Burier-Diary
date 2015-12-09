@@ -1,6 +1,6 @@
 <!-- 
     Document   : home.html
-    Created on : Oct 6, 2015, 8:52:04 PM
+    Created on : Oct 13, 2015, 5:17:34 PM
     Author     : Maddie
 -->
 
@@ -33,7 +33,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 
 </head>
 
@@ -83,7 +82,6 @@
                                     </ul>
                   
                     </li>
-
                     <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="glyphicon glyphicon-user"></i>
@@ -97,7 +95,6 @@
                                     <li><a href="index.html">Log out</a></li>
                                 </ul>
                     </li>
-                  
                     <li> <a href="new_entry.html"><i class="glyphicon glyphicon-cog"></i></a></li>
                     <li><a href="index.html"><i class="glyphicon glyphicon-off"></i></a></li>
                 </ul>
@@ -109,75 +106,43 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+      <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
         <div class="container">
-            <!---
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>New Entry</h1>
-                        <hr class="small">
-                        <span class="subheading">Write your thoughts here.</span>
-                    </div>
-                </div>
             </div>
-            -->
         </div>
     </header>
 
     <!-- Main Content -->
     <div class="container">
         <div class="row">
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-md-offset-1">
+            <img src="img/profile.png" id="profile" style="width:50%; margin-top:10px;" class="img-rounded" class="pull-left"/>
+           
+            <br>
+            <input type="file" id="myProfile" accept="image/*" class="form-control" onchange="showMyImage(this)" />
+            <button type="submit" class="btn btn-default btn-sm" onclick="document.getElementById('myProfile').click()"><i class="glyphicon glyphicon-wrench"></i> Diary Cover</button>
+            <br>
+            <br>     
+            </div>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p></p>
-                
-                <h2 class="page-header">Text Diary&nbsp;&nbsp;&nbsp;
-                    <a data-no-instant id="to_photo" class="tab" href="edit_post_photo.html"><font color=#A0A0A0>Photo Diary</font></a>
-                </h2>
-               
-                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-                <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-
-                <form  method="get" action="home.html">
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Title</label>
-                            <input type="text" class="form-control" value="Life" >
-                            <!--
-                            <input type="text" class="form-control" placeholder="Title" id="name" required data-validation-required-message="Please enter your name.">
-                            
-                            <p class="help-block text-danger"></p> -->
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>What is in your mind?</label>
-                            <textarea rows="10" class="form-control" id="edit_box">Now is no time to think of what you do not have. Think of what you can do with what there is Every day is a new day. It is better to be lucky. But I would rather be exact. Then when luck comes you are ready. A paragraph is a number of sentences grouped together and relating to one topic. Or, a group of related sentences that develop a single point. 
-
-This definition shows that the paragraphs of compositions are not mere arbitrary divisions. The division of a chapter into paragraphs must be made according to the changes of ideas introduced. 
-
-There is, therefore, no rule as to the length of a paragraph. It may be short or long according to the necessity of the case. A paragraph may consist of a single sentence or of many sentences. 
-
-In this aspect, the paragraphs of a piece of prose differ from the stanzas of verses of a poem. The stanza of a poem are usually of the same length and pattern but paragraphs are long or short according to the amount of matter to be expressed under each head. 
-
-The Principle of Good Paragraph Structure: 
-
-A good paragraph should have three aspects. " required data-validation-required-message="Please write your thoughts."</textarea>
-                            
-                            <!--
-                            <textarea rows="10" class="form-control" placeholder="New Entry" id="message" required data-validation-required-message="Please write your thoughts."></textarea>
-                            <p class="help-block text-danger"></p>
-                            -->
-                        </div>
-                    </div>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Title</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Spring">
+                  </div>
+                    <label for="exampleInputPassword1">Expiration Date: Dec 18, 2015</label>
                     <br>
-                    <div id="success"></div>
-
-                   <button onclick="location.href = 'my_entry.html';" type="submit" class="btn btn-default btn-sm">Submit</button>
-                   <!--<button type="reset" class="btn btn-default btn-sm">Reset</button> -->
-                    <!-- <button type="submit" class="btn btn-default btn-sm">Submit</button> -->
-
+                    <br>
+                  <div class="">
+                    <label>
+                      <input type="radio" value="private" name="security"> Private <a href="popup.html"><i class="glyphicon glyphicon-question-sign"></i></a>
+                    </label>
+                    <label>
+                      <input type="radio" value="public" name="security"> public <a href="popup.html"><i class="glyphicon glyphicon-question-sign"></i></a>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
         </div>
@@ -230,16 +195,29 @@ A good paragraph should have three aspects. " required data-validation-required-
 
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
+    <script>
+        function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0; i < files.length; i++) {           
+            var file = files[i];
+            var imageType = /image.*/;     
+            if (!file.type.match(imageType)) {
+                continue;
+            }           
+            var img=document.getElementById("profile");            
+            img.file = file;    
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { 
+                return function(e) { 
+                    aImg.src = e.target.result; 
+                }; 
+            })(img);
+            reader.readAsDataURL(file);
+            }    
+        }
+</script>
 
-    <script data-no-instant>
-        InstantClick.on('change', function() {
-            _hmt.push(['_trackPageView', location.pathname + location.search]);
-        });
-
-        InstantClick.init('mousedown');
-
-
-    </script>
 </body>
 
 </html>
+

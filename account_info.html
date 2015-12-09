@@ -123,7 +123,6 @@ Author     : Maddie
                                 <br>
                                 <br>
                                 <button type="submit" id="like" class="btn btn-danger btn-sm" onclick="changeLikes()"><i class="glyphicon glyphicon-ok"></i>Likes (48)</button>
-                                <p><button onclick="clickCounter()" id="result" type="button">Click me!</button></p>
                             
                                 <button type="submit" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus"></i>Friends</button>
 
@@ -206,7 +205,7 @@ Author     : Maddie
             <label>My Diary Book</label>
             <hr>
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="diarybook.html" class="thumbnail">
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Spring</label>
@@ -216,7 +215,7 @@ Author     : Maddie
             </div>
 
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="diarybook.html" class="thumbnail">
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Summer</label>
@@ -225,7 +224,7 @@ Author     : Maddie
                 </a>
             </div>
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="diarybook.html" class="thumbnail">
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Fall</label>
@@ -234,7 +233,7 @@ Author     : Maddie
                 </a>
             </div>
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="diarybook.html" class="thumbnail">
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Winter</label>
@@ -244,7 +243,7 @@ Author     : Maddie
             </div>
 
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="diarybook.html" class="thumbnail">
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Happy</label>
@@ -254,7 +253,7 @@ Author     : Maddie
             </div>
 
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="diarybook.html" class="thumbnail">
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Sad</label>
@@ -339,12 +338,12 @@ function showMyImage(fileInput) {
 <script>
 function changeLikes(fileInput) {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.likecount) {
-            localStorage.likecount = Number(localStorage.likecount)+1;
+        if (sessionStorage.likecount) {
+            sessionStorage.likecount = Number(sessionStorage.likecount)+1;
         } else {
-            localStorage.likecount = 49;
+            sessionStorage.likecount = 49;
         }
-        document.getElementById("like").innerHTML = "<i class='glyphicon glyphicon-ok'></i>Likes (" + localStorage.likecount + ")"
+        document.getElementById("like").innerHTML = "<i class='glyphicon glyphicon-ok'></i>Likes (" + sessionStorage.likecount + ")"
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }

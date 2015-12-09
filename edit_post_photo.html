@@ -138,11 +138,13 @@
                 <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                 <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-                    <img id="profile" style="width:40%; margin-top:10px;" class="img-rounded" class="pull-left"/>
+                    <img src="img/chopper.png" id="profile" style="width:40%; margin-top:10px;" class="img-rounded" class="pull-left"/>
+                    <br>
                     <br>
                     <input type="file" id="myProfile" accept="image/*" class="form-control" onchange="showMyImage(this)" />
                     <button type="submit" class="btn btn-default btn-sm" onclick="document.getElementById('myProfile').click()">
-                        <i class="glyphicon glyphicon-plus"></i>
+
+                        <i class="glyphicon glyphicon-wrench"></i>
                         Picture
                     </button>
                     <br>
@@ -151,7 +153,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Title</label>
-                            <input type="text" class="form-control" value="Today's life">
+                            <input type="text" class="form-control" value="Chopper">
                             <!--
                             <input type="text" class="form-control" placeholder="Title" id="name" required data-validation-required-message="Please enter your name.">
                             
@@ -161,7 +163,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>What is in your mind?</label>
-                            <textarea readonly rows="10" class="form-control" id="edit_box"> A paragraph is a number of sentences grouped together and relating to one topic. Or, a group of related sentences that develop a single point. 
+                            <textarea rows="10" class="form-control" id="edit_box"> Every day is a new day. It is better to be lucky. But I would rather be exact. Then when luck comes you are ready. A paragraph is a number of sentences grouped together and relating to one topic. Or, a group of related sentences that develop a single point. 
 
 This definition shows that the paragraphs of compositions are not mere arbitrary divisions. The division of a chapter into paragraphs must be made according to the changes of ideas introduced. 
 
@@ -192,7 +194,7 @@ A good paragraph should have three aspects. " required data-validation-required-
                     </div>
                    <!-- <button onclick="location.href = 'home.html';" type="submit" class="btn btn-default btn-sm">Submit</button> -->
                    <!--<button type="reset" class="btn btn-default btn-sm">Reset</button> -->
-                     <button type="submit" class="btn btn-default btn-sm">Submit</button>
+                     <button onclick="location.href = 'my_entry.html';" type="submit" class="btn btn-default btn-sm">Submit</button>
 
                 </form>
             </div>

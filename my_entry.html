@@ -139,13 +139,14 @@
             <hr>
             <div class="post-preview">
                 <a href="post.html">
-                <div class="entry_title">Today's life</div>
+                <div class="entry_title">Life [Spring]</div>
                     <h3 class="post-subtitle">
                         Now is no time to think of what you do not have. Think of what you can do with what there is    ...
                     </h3>
                 </a>
                 <div class="post-meta">Posted on Nov 18, 2015, 3:00 am     
                 <a href="edit_post.html" class="edit_button">[Edit]</a>
+                <a data-toggle="modal" href="#myModal" class="delete_button">[Delete]</a>
                 </div>
 
             </div>
@@ -153,15 +154,37 @@
             <div class="post-preview">
                 <a href="post.html">
                     <h3 class="post-subtitle">
-                    <div class="entry_title">Today's life</div>
+                    <div class="entry_title">Chopper [Summer]</div>
+                    <img src="img/chopper.png" id="profile" style="width:30%; margin-top:10px;" class="img-rounded" class="pull-left"/>
+                    <br>
+                    <br>
                         Now is no time to think of what you do not have. Think of what you can do with what there is    ...
                     </h3>
                 </a>
                 <div class="post-meta">Posted on Nov 18, 2015, 3:00 am     
-                <a href="edit_post.html" class="edit_button">[Edit]</a>
-                </div>
+                <a href="edit_post_photo.html" class="edit_button">[Edit]</a>
+             
+                <a data-toggle="modal" href="#myModal" class="delete_button">[Delete]</a>
 
             </div>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Delete</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete (irreversiable action)?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
         </div>
 
     </div>
@@ -178,6 +201,7 @@
                     <img src="http://placehold.it/171x180" alt="...">
                     <div class="book_title">
                         <label>Spring</label>
+                        <br>
                         <p class="post-meta">Coming on Dec 18, 2015</p>
                     </div>    
                 </a>
