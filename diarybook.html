@@ -27,6 +27,7 @@
     <link href="css/clean-blog.min.css" rel="stylesheet">
     <link href="css/new_entry.css" rel="stylesheet">
     <link href="css/my_entry.css" rel="stylesheet">
+    <link href="css/diarybook.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -159,7 +160,7 @@
                         <div class="row">
                             <div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-1">
                                 <label>Spring</label>  
-                                                       <button onclick="location.href = 'edit_diarybook.html';" type="submit" class="btn btn-default btn-xs">Edit</button>
+                                                       <button onclick="location.href = 'edit_diarybook.html';" type="submit"  class="btn btn-default btn-xs" >Edit</button>
                    <button type="" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal">Delete</button>
                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                   <div class="modal-dialog" role="document">
@@ -172,7 +173,7 @@
                                         Are you sure you want to delete (irreversiable action)?
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal"><a href="my_entry.html">OK</a></button>
+                                        <button type="button" onclick="javascript:window.location.href='my_entry.html';" class="btn btn-default" data-dismiss="modal"><a href="my_entry.html">OK</a></button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
