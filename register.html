@@ -90,7 +90,7 @@
                 <div class="wrap">
                     <p class="form-title">
                         Register</p>
-                    <form class="login">
+                    <form form method="get" action="home.html" class="login">
                     <input type="text" placeholder="Email" />
                     <input type="password" placeholder="Password" />
                     <input type="text" placeholder="Display Name" />
@@ -174,8 +174,17 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+        <script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    //var x = document.getElementsByName("name");
+    sessionStorage.setItem("username", "Maddie");
+    sessionStorage.setItem("password", "123456");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
 
 </body>
 
