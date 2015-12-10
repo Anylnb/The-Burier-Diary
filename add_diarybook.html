@@ -136,14 +136,44 @@
                     <label for="exampleInputPassword1">Expiration Date: Dec 18, 2015</label>
                     <br>
                     <br>
-                  <div class="">
+                   <div class="">
                     <label>
-                      <input type="radio" value="private" name="security"> Private <a href="popup.html"><i class="glyphicon glyphicon-question-sign"></i></a>
+                      <input type="radio" value="private" name="security"> Private <a data-toggle="modal" href="#private_ques"><i class="glyphicon glyphicon-question-sign"></i></a>
+
                     </label>
                     <label>
-                      <input type="radio" value="public" name="security"> public <a href="popup.html"><i class="glyphicon glyphicon-question-sign"></i></a>
+                      <input type="radio" value="public" name="security"> Public <a a data-toggle="modal" href="#public_ques"><i class="glyphicon glyphicon-question-sign"></i></a>
                     </label>
                   </div>
+                  <div class="modal fade" id="private_ques" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Private</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        Mark to set your diary as "Private" status.
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="public_ques" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Private</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        Mark to set your diary book as "Public" status.
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+            
                   <br>
                   <button type="submit" class="btn btn-default">Add</button>
                 </form>
