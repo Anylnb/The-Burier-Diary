@@ -1,4 +1,4 @@
-The Burier Diary uses following open sourse code
+The Burier Diary uses following open sourse code:
 
 # [Start Bootstrap](http://startbootstrap.com/) - [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/)
 
